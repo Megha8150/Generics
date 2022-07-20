@@ -6,21 +6,29 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    internal class MaxNum
+    class MaxNum
     {
-        public static float MaximumFloatNumber(float firstValue, float secondValue, float thirdValue)
+        public static string MaximumStringNumber(string firstString, string secondString, string thirdString)
         {
-            if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
+            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) >= 0 && firstString.CompareTo(thirdString) > 0 ||
+                firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) >= 0)
             {
-                return firstValue;
+                return firstString;
             }
-            if (secondValue.CompareTo(firstValue) > 0 && secondValue.CompareTo(thirdValue) > 0)
+
+            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) >= 0 && secondString.CompareTo(thirdString) > 0 ||
+                secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) >= 0)
             {
-                return secondValue;
+                return secondString;
             }
-            if (thirdValue.CompareTo(firstValue) > 0 && thirdValue.CompareTo(secondValue) > 0)
+
+            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) >= 0 && thirdString.CompareTo(secondString) > 0 ||
+                thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) >= 0)
             {
-                return thirdValue;
+                return thirdString;
             }
             throw new Exception("firstNumber,secondNumber and thirdNumber are same");
         }

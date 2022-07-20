@@ -2,9 +2,8 @@
 
 using Generics;
 Console.WriteLine("test case 1");
-Console.WriteLine("Maximum float Number is " +MaxNum.MaximumFloatNumber(10.23f,1.23f,5.56f));
+Console.WriteLine("Largest String is " + MaxNum.MaximumStringNumber("Shreyas", "Abhi", "Megha"));
 Console.WriteLine("test case 2");
-Console.WriteLine("Maximum float Number is " +MaxNum.MaximumFloatNumber(3.23f, 15.66f, 10.23f));
+Console.WriteLine("Largest String is " + MaxNum.MaximumStringNumber("Megha", "Sagar", "Aish"));
 Console.WriteLine("test case 3");
-Console.WriteLine("Maximum float Number is " +MaxNum.MaximumFloatNumber(8.5f, 8.23f, 12.43f));
-
+Console.WriteLine("Largest String is " + MaxNum.MaximumStringNumber("Bharath", "Gowri","Virat"));

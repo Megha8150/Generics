@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    internal class MaxInt
+    internal class MaxNum
     {
-        public static int MaximumIntegerNumber(int firstValue, int secondValue, int thirdValue)
+        public static float MaximumFloatNumber(float firstValue, float secondValue, float thirdValue)
         {
             if (firstValue.CompareTo(secondValue) > 0 && firstValue.CompareTo(thirdValue) > 0)
             {
@@ -24,6 +24,5 @@ namespace Generics
             }
             throw new Exception("firstNumber,secondNumber and thirdNumber are same");
         }
-
     }
 }

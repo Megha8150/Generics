@@ -6,31 +6,13 @@ using System.Threading.Tasks;
 
 namespace Generics
 {
-    class MaxNum
-    {
-        public static string MaximumStringNumber(string firstString, string secondString, string thirdString)
+        public class MaxNumberCheck
         {
-            if (firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) > 0 ||
-                firstString.CompareTo(secondString) >= 0 && firstString.CompareTo(thirdString) > 0 ||
-                firstString.CompareTo(secondString) > 0 && firstString.CompareTo(thirdString) >= 0)
+            public static void FindMax<T>(T[] inputArray)
             {
-                return firstString;
+                Array.Sort(inputArray);
+                Console.WriteLine(inputArray[inputArray.Length - 1]);
             }
-
-            if (secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) > 0 ||
-                secondString.CompareTo(firstString) >= 0 && secondString.CompareTo(thirdString) > 0 ||
-                secondString.CompareTo(firstString) > 0 && secondString.CompareTo(thirdString) >= 0)
-            {
-                return secondString;
-            }
-
-            if (thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) > 0 ||
-                thirdString.CompareTo(firstString) >= 0 && thirdString.CompareTo(secondString) > 0 ||
-                thirdString.CompareTo(firstString) > 0 && thirdString.CompareTo(secondString) >= 0)
-            {
-                return thirdString;
-            }
-            throw new Exception("firstNumber,secondNumber and thirdNumber are same");
         }
-    }
+    
 }

@@ -2,16 +2,8 @@
 
 using Generics;
 
-Console.WriteLine("Welcome to Maximum value finder Using Generic Class :");
+Console.WriteLine("Welcome to Maximum value finder Using Generic Method :");
 
-int[] intArray = { 104, 412, 253, 523, 12 };
-GenericMaximum<int> genericInt = new GenericMaximum<int>(intArray);
-genericInt.PrintMaxValue();
-
-double[] doubleArray = { 2.3, 74.5, 5.66, 54.23, 9.36 };
-GenericMaximum<double> genericDouble = new GenericMaximum<double>(doubleArray);
-genericDouble.PrintMaxValue();
-
-string[] stringArray = { "Megha", "shreyas", "Abhi", "Kruthi", "sagar" };
-GenericMaximum<string> genericString = new GenericMaximum<string>(stringArray);
-genericString.PrintMaxValue();
+MaxNumberCheck.FindMax<int>(0, 5, 13, 56, 7, 85646, 8523, 986745);
+MaxNumberCheck.FindMax<double>(2563.1458, 478.526, 54.23, 24.56, 89.26, 586.326, 9);
+MaxNumberCheck.FindMax<string>("megh", "MEGHANA", "NAYAK", "Nayak", "Kruthi", "kruthi");

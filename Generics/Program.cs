@@ -1,9 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Generics;
-Console.WriteLine("test case 1");
-Console.WriteLine("Largest String is " + MaxNum.MaximumStringNumber("Shreyas", "Abhi", "Megha"));
-Console.WriteLine("test case 2");
-Console.WriteLine("Largest String is " + MaxNum.MaximumStringNumber("Megha", "Sagar", "Aish"));
-Console.WriteLine("test case 3");
-Console.WriteLine("Largest String is " + MaxNum.MaximumStringNumber("Bharath", "Gowri","Virat"));
+
+class Program
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Welcome to Maximum value finder Using Generic Method :");
+
+        int[] intArray = { 6,2,5,9, 4 };
+        double[] doubleArray = { 2.356, 5.263, 9.215, 2.3 };
+        string[] stringArray = { "Sagar", "Megha", "Shreyas", "kruthi" };
+
+        MaxNumberCheck.FindMax<int>(intArray);
+        MaxNumberCheck.FindMax<double>(doubleArray);
+        MaxNumberCheck.FindMax<string>(stringArray);
+    }
+}

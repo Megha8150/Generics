@@ -2,8 +2,17 @@
 
 using Generics;
 
-Console.WriteLine("Welcome to Maximum value finder Using Generic Method :");
 
-MaxNumberCheck.FindMax<int>(0, 5, 13, 56, 7, 85646, 8523, 986745);
-MaxNumberCheck.FindMax<double>(2563.1458, 478.526, 54.23, 24.56, 89.26, 586.326, 9);
-MaxNumberCheck.FindMax<string>("megh", "MEGHANA", "NAYAK", "Nayak", "Kruthi", "kruthi");
+
+    Console.WriteLine("Welcome to Maximum value finder Using Generic Method :");
+
+    int[] integer = {2, 75, 82, 6, 13 };
+    double[] doubles = { 23.35, 4231.2562, 52.369, 899.23, 72.156 };
+    string[] strings = { "megh", "meghana", "Nayak", "nayak" };
+    MaxNumberCheck<int> max = new MaxNumberCheck<int>(integer);
+    MaxNumberCheck<double> doub = new MaxNumberCheck<double>(doubles);
+    MaxNumberCheck<string> str = new MaxNumberCheck<string>(strings);
+
+    max.testMaximum();
+    doub.testMaximum();
+    str.testMaximum();
